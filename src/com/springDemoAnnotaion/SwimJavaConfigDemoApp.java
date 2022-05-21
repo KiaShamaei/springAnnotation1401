@@ -2,14 +2,14 @@ package com.springDemoAnnotaion;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class JavaConfigDemo {
+public class SwimJavaConfigDemoApp {
     public static void main(String[] args) {
         //read spring config java class
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SportConfig.class);
-        //get the bean from spring container
-        Coach theCoach = context.getBean("tennisCoach" , Coach.class);
-        Coach theCoachSwim = context.getBean("swimCoach" , Coach.class);
+        //retrieve bean from container
+        Coach theCoach = context.getBean("swimCoach" , Coach.class);
         //call method from bean
-        theCoach.getWorkOut();
+        theCoach.getFortune();
+        theCoach.writeProperties();
     }
 }

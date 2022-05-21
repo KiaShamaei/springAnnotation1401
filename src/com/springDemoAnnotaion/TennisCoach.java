@@ -6,8 +6,6 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 //@Component("theTennnisCoach")
@@ -57,8 +55,9 @@ public class TennisCoach implements Coach , InitializingBean , DisposableBean {
     }
 
     @Override
-    public void getWorkOut(){
+    public String getWorkOut(){
         System.out.println("this work out from tennis obj");
+        return null;
     }
 
     @Override
@@ -73,6 +72,11 @@ public class TennisCoach implements Coach , InitializingBean , DisposableBean {
 
     @Override
     public void destory() throws Exception {
+
+    }
+
+    @Override
+    public void writeProperties() {
 
     }
 
