@@ -7,9 +7,15 @@ public class DemoAnnotationApp {
         //read spring config
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         //get the bean from context
-        Coach theCoach = context.getBean("theTennnisCoach" , Coach.class);
+//        Coach theCoach = context.getBean("theTennnisCoach" , Coach.class);
+        //after set default config
+        Coach theCoach = context.getBean("tennisCoach" , Coach.class);
         //call method from bean
         theCoach.getWorkOut();
+
+        //call dependency method
+        theCoach.getFortune();
+
         //close context
         context.close();
     }
